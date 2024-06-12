@@ -1,36 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background: url('../Images/bg.jpg');
+    background: url('../Images/bg.jpg') no-repeat fixed center;
     background-size: cover;
     font-family: 'Courier New', Courier, monospace;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
 }
 
-.fluid-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: transparent;
-    height: 80vh;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-}
-
+.fluid-container,
+.row,
 .col-md-6 {
     display: flex;
     justify-content: center;
@@ -38,25 +13,29 @@ body {
     background-color: transparent;
     margin: 0;
     padding: 0;
+    height: 80vh;
 }
 
 .col-md-6 a {
     text-decoration: none;
+    color: #fff;
 }
 
 .btn {
     background-color: transparent;
     border: 1px solid #999;
     color: #fff;
-    cursor: grab;
     font-weight: 500;
     transition: 0.3s;
     display: inline-block;
-    width: 160px;
+    width: 200px;
     height: 40px;
+    text-align: center;
 }
 
-.btn:hover, .btn:active, .btn:focus {
+.btn:hover,
+.btn:active,
+.btn:focus {
     background-color: #b6b6b6;
     border: 1px solid #666;
     color: #000;
@@ -71,4 +50,63 @@ body {
 
 #btn2 {
     border-radius: 0 50px 50px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        background: url('../Images/bg.jpg') no-repeat fixed center;
+        background-size: cover;
+        font-family: 'Courier New', Courier, monospace;
+        background-position-x: -300px;
+    }
+
+    .fluid-container,
+    .row,
+    .col-md-6 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        height: 0vh;
+        margin-top: 13vh;
+    }
+
+    .col-md-6 a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .btn {
+        background-color: transparent;
+        border: 1px solid #999;
+        color: #fff;
+        font-weight: 500;
+        transition: 0.3s;
+        display: inline-block;
+        width: 200px;
+        height: 40px;
+        text-align: center;
+    }
+
+    .btn:hover,
+    .btn:active,
+    .btn:focus {
+        background-color: #b6b6b6;
+        border: 1px solid #666;
+        color: #000;
+        box-shadow: 0 0 1000px 20px #fff;
+        transition: 0.3s;
+        outline: none;
+    }
+
+    #btn1 {
+        border-radius: 50px 0 0 50px;
+    }
+
+    #btn2 {
+        border-radius: 0 50px 50px 0;
+    }
 }
