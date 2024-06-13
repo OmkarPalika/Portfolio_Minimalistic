@@ -91,9 +91,9 @@ body {
 .btn-outline-success:hover,
 .btn-outline-success:focus,
 .btn-outline-success:active {
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--secondary-color) !important;
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
     box-shadow: 0 0 10px var(--shadow-color);
 }
 
